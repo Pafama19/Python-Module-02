@@ -10,33 +10,37 @@ def input_temperature(temp_str: str) -> int:
 def test_temperature() -> None:
     print("=== Graden Temperature Checker ===")
     print()
-    print("Input data is '25'")
+    value1: str = "25"
+    print(f"Input data is '{value1}'")
     try:
-        temp = input_temperature("25")
+        temp = input_temperature(value1)
         print(f"Temperature is now {temp}ºC")
     except ValueError as e:
         print("Caught input_temperature error: ")
         print(f"{e}")
     print()
-    print("Input data is 'abc'")
+    value2: str = "abc"
+    print(f"Input data is '{value2}'")
     try:
-        temp = input_temperature("abc")
+        temp = input_temperature(value2)
         print(f"Temperature is now {temp}ºC")
     except ValueError as e:
         print("Caught input_temperature error: ", end="")
         print(f"{e}")
     print()
-    print("Input data is '100'")
+    value3: str = "100"
+    print(f"Input data is '{value3}'")
     try:
-        temp = input_temperature("100")
+        temp = input_temperature(value3)
         print(f"Temperature is now {temp}ºC")
     except Exception as e:
         print("Caught input_temperature error: ", end="")
         print(f"{e}")
-        print()
-    print("Input data is '-50'")
+    print()
+    value4: str = "-50"
+    print(f"Input data is '{value4}'")
     try:
-        temp = input_temperature("-50")
+        temp = input_temperature(value4)
         print(f"Temperature is now {temp}ºC")
     except Exception as e:
         print("Caught input_temperature error: ", end="")
